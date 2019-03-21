@@ -45,9 +45,7 @@ public class ProductController {
         List<ProductInfo> productInfoList = productService.findUpAll();
 
         //2. 获取类目type列表
-        List<Integer> categoryTypeList = productInfoList.stream()
-                .map(ProductInfo::getCategoryType)
-                .collect(Collectors.toList());
+        List<Integer> categoryTypeList = productInfoList.stream().map(ProductInfo::getCategoryType).collect(Collectors.toList());
 
         //3. 从数据库查询类目
         List<ProductCategory> categoryList = categoryService.findByCategoryTypeIn(categoryTypeList);
