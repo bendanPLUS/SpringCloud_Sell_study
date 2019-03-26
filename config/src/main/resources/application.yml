@@ -1,6 +1,11 @@
 spring:
   application:
     name: config
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: sannian
+    password: sannian
   cloud:
     config:
       server:
