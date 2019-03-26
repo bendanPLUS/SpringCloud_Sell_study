@@ -10,8 +10,8 @@ spring:
         #   http://localhost:8080/order-b.yml
         #   {label}/{name}-{profiles}.yml   其中 label:分支  name:服务名 profile：环境
         git:
-          uri: https://gitee.com/sannian1996/SpringCloudSellConfig
-          basedir: D:/SpringCloud_Sell/config
+          uri: https://github.com/sannian1996/SpringCloudSellConfig
+          basedir: D:/SpringCloudSellConfig/config
 eureka:
   client:
     service-url:
