@@ -1,6 +1,10 @@
+# 使用配置中心拉取配置不能使用 application.yml ，否则spring无法判断配置先后顺序
+# 应该使用 bootstrap.yml ，spring 将会先应用bootstrap.yml的配置
 spring:
+  #  name
   application:
     name: order
+  #    配置中心
   cloud:
     config:
       discovery:
@@ -12,20 +16,23 @@ spring:
         myMessage:
           group: order
           content-type: application/json
+  #    zipkin
   zipkin:
     base-url: http://zipkin:9411/
     sender:
       type: web
+  #    sleuth
   sleuth:
     sampler:
       probability: 1
+# eureka
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
-
+# 日志
 logging:
   level:
     org.springframework.cloud.openfeign: debug

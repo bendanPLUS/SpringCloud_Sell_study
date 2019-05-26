@@ -28,3 +28,4 @@ client.service-url.defaultZone: http://localhost:8761/eureka/
 这时候，client注册
 eureka.client.service-url.defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
 
+### config 统一配置中心

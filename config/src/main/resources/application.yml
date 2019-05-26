@@ -1,27 +1,30 @@
 spring:
+  # name
   application:
     name: config
+  # rabbitmq
   rabbitmq:
     host: 127.0.0.1
     port: 5672
     username: sannian
     password: sannian
+  # cloud config
   cloud:
     config:
       server:
-#        配置远端git,如果有账户密码，可以配置username  password   basedir(本地仓库)
-
+        #   配置远端git,如果有账户密码，可以配置username  password   basedir(本地仓库)
         #   拉取的配置访问地址为，如下：
-        #   http://localhost:8080/order-b.yml
+        #   http://localhost:8080/order-dev.yml
         #   {label}/{name}-{profiles}.yml   其中 label:分支  name:服务名 profile：环境
         git:
           uri: https://github.com/sannian1996/SpringCloudSellConfig
           basedir: D:/SpringCloudSellConfig/config
+# eureka
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-
+# 暴露接口
 management:
   endpoints:
     web:
