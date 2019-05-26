@@ -2,7 +2,7 @@ eureka:
   client:
     service-url:
       #     配置服务注册中心集群时，此处可以配置多个地址(通过逗号隔开)
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
 #  instance:
 #    hostname: clientName
 
