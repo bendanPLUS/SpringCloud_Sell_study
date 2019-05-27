@@ -7,7 +7,7 @@ eureka:
   #  如果低于,会将当前的实例注册信息保护起来,让这些实例不会过期.可以配置 eureka.server.enable-self-preservation=false 来关闭保护机制
   #  关闭保护机制，信息面板中会显示 THE SELF PRESERVATION MODE IS TURNED OFF.THIS MAY NOT PROTECT INSTANCE EXPIRY IN CASE OF NETWORK/OTHER PROBLEMS.
   server:
-    enable-self-preservation: false
+    enable-self-preservation: true
 
   #  instance:
   #   hostname不配置的话，会根据操作系统的主机名来获取(注意，eureka相互注册时hostname可能会导致失败，无法实现高可用)
