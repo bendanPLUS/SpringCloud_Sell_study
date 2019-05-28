@@ -66,10 +66,10 @@ public class ProductServiceImpl implements ProductService {
     @Transactional
     public List<ProductInfo> decreaseStockProcess(List<DecreaseStockInput> decreaseStockInputList) {
         List<ProductInfo> productInfoList = new ArrayList<>();
-        for (DecreaseStockInput decreaseStockInput: decreaseStockInputList) {
+        for (DecreaseStockInput decreaseStockInput : decreaseStockInputList) {
             Optional<ProductInfo> productInfoOptional = productInfoRepository.findById(decreaseStockInput.getProductId());
             //判断商品是否存在
-            if (!productInfoOptional.isPresent()){
+            if (!productInfoOptional.isPresent()) {
                 throw new ProductException(ResultEnum.PRODUCT_NOT_EXIST);
             }
 

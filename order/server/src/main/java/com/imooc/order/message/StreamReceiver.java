@@ -23,6 +23,7 @@ public class StreamReceiver {
 
     /**
      * 接收orderDTO对象 消息
+     *
      * @param message
      */
     @StreamListener(value = StreamClient.INPUT)

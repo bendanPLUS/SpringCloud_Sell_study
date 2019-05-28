@@ -12,12 +12,10 @@ import java.util.List;
 @Data
 public class ProductVO {
 
-    @JsonProperty("name")
-    private String categoryName;
-
-    @JsonProperty("type")
-    private Integer categoryType;
-
     @JsonProperty("foods")
     List<ProductInfoVO> productInfoVOList;
+    @JsonProperty("name")
+    private String categoryName;
+    @JsonProperty("type")
+    private Integer categoryType;
 }

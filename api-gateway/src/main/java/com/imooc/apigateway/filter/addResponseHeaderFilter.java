@@ -5,7 +5,6 @@ import com.netflix.zuul.context.RequestContext;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletResponse;
-
 import java.util.UUID;
 
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.POST_TYPE;
@@ -16,7 +15,7 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
  * 2018-02-15 16:00
  */
 @Component
-public class addResponseHeaderFilter extends ZuulFilter{
+public class addResponseHeaderFilter extends ZuulFilter {
     @Override
     public String filterType() {
         return POST_TYPE;

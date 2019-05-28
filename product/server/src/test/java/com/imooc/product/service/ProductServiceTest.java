@@ -17,7 +17,7 @@ import java.util.List;
  * 2017-12-09 22:03
  */
 @Component
-public class ProductServiceTest extends ProductApplicationTests{
+public class ProductServiceTest extends ProductApplicationTests {
 
     @Autowired
     private ProductService productService;
