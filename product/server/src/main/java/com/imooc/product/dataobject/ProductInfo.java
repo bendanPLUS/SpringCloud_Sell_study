@@ -12,7 +12,7 @@ import java.util.Date;
  * 2017-12-09 21:23
  */
 @Data
-//@Table(name = "T_proxxx")
+//@Table(name = "T_proxxx") JPA TODO 如果数据库表明和类名不一致 加@Table注解 使得找到对应的表明 下划线回转码
 @Entity
 public class ProductInfo {
 
