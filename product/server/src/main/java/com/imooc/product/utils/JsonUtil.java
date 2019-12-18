@@ -12,6 +12,7 @@ public class JsonUtil {
     private static ObjectMapper objectMapper = new ObjectMapper();
 
     /**
+     * 把对象转化成json字符串
      * 转换为json字符串
      *
      * @param object
