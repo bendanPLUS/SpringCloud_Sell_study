@@ -53,10 +53,6 @@ public class ProductController {
         //4. 构造数据
         List<ProductVO> productVOList = new ArrayList<>();
         for (ProductCategory productCategory : categoryList) {
-            ProductVO productVO = new ProductVO();
-            productVO.setCategoryName(productCategory.getCategoryName());
-            productVO.setCategoryType(productCategory.getCategoryType());
-
             List<ProductInfoVO> productInfoVOList = new ArrayList<>();
             for (ProductInfo productInfo : productInfoList) {
                 if (productInfo.getCategoryType().equals(productCategory.getCategoryType())) {
@@ -65,15 +61,19 @@ public class ProductController {
                     productInfoVOList.add(productInfoVO);
                 }
             }
-            productVO.setProductInfoVOList(productInfoVOList);
-            productVOList.add(productVO);
+            //建造者模式
+            productVOList.add(
+                    ProductVO.builder()
+                    .categoryName(productCategory.getCategoryName())
+                    .categoryType(productCategory.getCategoryType())
+                    .productInfoVOList(productInfoVOList)
+                    .build());
         }
-
         return ResultVOUtil.success(productVOList);
     }
 
     /**
-     * 获取商品列表(给订单服务用的)
+     * 获取商品列表(给订单服务用的)   订单服务那边调用这个接口
      *
      * @param productIdList
      * @return

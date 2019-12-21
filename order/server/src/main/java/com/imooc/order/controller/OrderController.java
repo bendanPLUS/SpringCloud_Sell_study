@@ -46,10 +46,11 @@ public class OrderController {
         if (bindingResult.hasErrors()) {
             log.error("【创建订单】参数不正确, orderForm={}", orderForm);
             throw new OrderException(ResultEnum.PARAM_ERROR.getCode(),
+                    //能获取到@Valid OrderForm orderForm 校验上面的@NotEmpty(message = "姓名必填") message
                     bindingResult.getFieldError().getDefaultMessage());
         }
         // orderForm -> orderDTO
-        OrderDTO orderDTO = OrderForm2OrderDTOConverter.convert(orderForm);
+        OrderDTO orderDTO = OrderForm2OrderDTOConverter.convert(orderForm);//TODO新写一个转换工具类 在Converter包下
         if (CollectionUtils.isEmpty(orderDTO.getOrderDetailList())) {
             log.error("【创建订单】购物车信息为空");
             throw new OrderException(ResultEnum.CART_EMPTY);

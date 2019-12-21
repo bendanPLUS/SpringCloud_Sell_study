@@ -15,6 +15,10 @@ import java.util.List;
 /**
  * Created by 廖师兄
  * 2017-12-10 21:04
+ * src/main/resources/bootstrap.yml 文件下声明的
+ * spring:
+ *   application:
+ *     name: product
  */
 @FeignClient(name = "product", fallback = ProductClient.ProductClientFallback.class)
 public interface ProductClient {

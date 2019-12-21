@@ -39,6 +39,7 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderMasterRepository orderMasterRepository;
 
+    //TODO 调用其它服务
     @Autowired
     private ProductClient productClient;
 

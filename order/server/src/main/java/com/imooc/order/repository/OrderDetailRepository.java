@@ -8,6 +8,8 @@ import java.util.List;
 /**
  * Created by 廖师兄
  * 2017-12-10 16:12
+ *
+ * Repository 资料库的意思
  */
 public interface OrderDetailRepository extends JpaRepository<OrderDetail, String> {
 
